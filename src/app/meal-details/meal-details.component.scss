@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'header';
+    src: url(/Fonts/Pacifico-Regular.ttf);
+}
+.meal-details {
+    width: 100% !important;
+    background-color: #F4F2EE;
+}
+.head{
+    font-family: 'header';
+    font-weight: 900;
+
+}
+.meal-header{
+ img {
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+ .links .youtube {
+    color:white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: red ;
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-color: white;
+        color: red;
+    }
+ }
+ .links .source {
+    color:white;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: green ;
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-color: white;
+        color: green;
+    }
+ }
+}
+.meal-ingredients {
+    font-size: 20px;
+    font-weight: 700;
+}
+.meal-instructions {
+    font-size: 20px;
+    font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}

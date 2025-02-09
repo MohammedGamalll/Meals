@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "header";
+  src: url(/Fonts/Pacifico-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+.home {
+  // width: 100%;
+  background-color: #f4f2ee;
+  font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+}
+header {
+  font-family: "header";
+  background: linear-gradient(to right, #f29724, #ff0004);
+  background-clip: text;
+  color: transparent;
+}
+section ul li .inner {
+  position: relative;
+  min-height: 310px;
+  transition: all 0.3s ease-out;
+  img {
+    position: absolute;
+    top: -20%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+  }
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f29724;
+  }
+  &:hover img {
+    transform: rotate(360deg);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  a {
+    background-color: #f29724;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      background-color: #000;
+      color: #f29724 !important;
+    }
+  }
+  p{
+    font-size: .9rem;
+    font-weight: 400;
+  }
+}
+.notAll {
+  min-height: 280px !important;
+}
+
+// $breakpoint-tablet: 768px;
+// @media (max-width: $breakpoint-tablet) {
+//   .sidebar{
+//     // display: none;
+//     position: absolute;
+//   }
+//   .home{
+//     width: 100% !important;
+//     padding: 0  !important;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+//   .home header {
+//     margin-top: 100px;
+//   }
+// }

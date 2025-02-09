@@ -1,0 +1,49 @@
+.cat {
+  margin: 20px 0;
+  ul li {
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  ul li a {
+    color: #333;
+    font-size: 20px;
+  }
+}
+.selected {
+  background-color: black;
+  a {
+    color: white !important;
+  }
+}
+.sm\:hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .cat {
+    display: none;
+  }
+
+  .sm\:hidden {
+    display: flex ;
+    justify-content: center;
+  }
+}
+.selected {
+  background-color: black;
+  color: white;
+}
+
+select {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #f29724;
+  background-color: white;
+  cursor: pointer;
+}
