@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { MealsService } from '../meals.service';
 import { MealDetails } from '../meal-details';
 import { ActivatedRoute } from '@angular/router';
-import { SidebarComponent } from "../sidebar/sidebar.component";
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-meal-details',
   templateUrl: './meal-details.component.html',
   styleUrl: './meal-details.component.scss',
-  imports: [SidebarComponent],
+  imports: [],
 })
 export class MealDetailsComponent {
   mealDetails!: MealDetails;

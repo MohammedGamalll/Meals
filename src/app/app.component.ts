@@ -6,16 +6,9 @@ import { CatigouriesComponent } from './catigouries/catigouries.component';
 import { MealDetailsComponent } from './meal-details/meal-details.component';
 import { initFlowbite } from 'flowbite';
 
-
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    SidebarComponent,
-    HomeComponent,
-    CatigouriesComponent,
-    MealDetailsComponent,
-  ],
+  imports: [RouterOutlet, SidebarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
