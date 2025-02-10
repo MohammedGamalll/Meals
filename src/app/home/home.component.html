@@ -17,8 +17,8 @@
         <ul class="grid grid-cols-12 list-unstyled w-100 my-5">
             @if(selectedCategory === 'All'){
             @for (meal of allMeals; track meal.idMeal) {
-            <!-- col-md-4 col-lg-3 py-4 px-lg-4 px-md-1 px-1 -->
-            <li class="col-span-3 w-full px-3 py-4">
+            <li
+                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full px-3 py-4">
                 <div
                     class="inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
                     <img src="{{meal.strMealThumb}}" class
@@ -40,7 +40,8 @@
             }
             @else {
             @for (meal of selectedMeals ; track meal.idMeal){
-            <li class="col-span-3 w-full px-3 py-4">
+            <li
+                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full px-3 py-4">
                 <div
                     class="notAll inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
 
