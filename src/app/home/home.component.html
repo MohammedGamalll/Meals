@@ -18,7 +18,7 @@
             @if(selectedCategory === 'All'){
             @for (meal of allMeals; track meal.idMeal) {
             <li
-                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full md:px-2 lg:px-3 sm:px-1 py-4">
+                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full  md:px-2 lg:px-3 py-4">
                 <div
                     class="inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
                     <img src="{{meal.strMealThumb}}" class
@@ -41,8 +41,8 @@
             @else {
             @for (meal of selectedMeals ; track meal.idMeal){
             <li
-            class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full md:px-2 lg:px-3 sm:px-1 py-4">
-            <div
+                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full md:px-2 lg:px-3 sm:px-1 py-4">
+                <div
                     class="notAll inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
 
                     <img src="{{meal.strMealThumb}}" class

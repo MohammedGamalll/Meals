@@ -47,30 +47,22 @@ section ul li .inner {
       color: #f29724 !important;
     }
   }
-  p{
-    font-size: .9rem;
+  p {
+    font-size: 0.9rem;
     font-weight: 400;
   }
 }
 .notAll {
-  min-height: 280px !important;
+  min-height: 250px !important;
 }
 
-// $breakpoint-tablet: 768px;
-// @media (max-width: $breakpoint-tablet) {
-//   .sidebar{
-//     // display: none;
-//     position: absolute;
-//   }
-//   .home{
-//     width: 100% !important;
-//     padding: 0  !important;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-//   }
-//   .home header {
-//     margin-top: 100px;
-//   }
-// }
+$breakpoint-tablet: 640px;
+@media (max-width: $breakpoint-tablet) {
+  section ul li {
+    padding: 0 20px;
+  }
+  header {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
