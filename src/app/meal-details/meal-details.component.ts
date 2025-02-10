@@ -3,12 +3,13 @@ import { MealsService } from '../meals.service';
 import { MealDetails } from '../meal-details';
 import { ActivatedRoute } from '@angular/router';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { NotfoundComponent } from '../notfound/notfound.component';
 
 @Component({
   selector: 'app-meal-details',
   templateUrl: './meal-details.component.html',
   styleUrl: './meal-details.component.scss',
-  imports: [],
+  imports: [NotfoundComponent],
 })
 export class MealDetailsComponent {
   mealDetails!: MealDetails;

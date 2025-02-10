@@ -1,13 +1,13 @@
-<div class="meal-details py-5 px-4">
+<div class="meal-details ">
     @if (loading) {
-    <div class="loader flex justify-center items-center min-vh-100">
+    <div class="loader flex justify-center items-center min-vh-100 ">
         <div class="spinner-border text-orange-400" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
 
-    } @else if (mealDetails) {
-    <div class="container d-flex flex-column justify-content-center">
+    } @else if (mealDetails && !mealNotFound) {
+    <div class="container d-flex flex-column justify-content-center py-5 px-4">
         <div
             class="meal-header d-flex flex-column align-items-center mb-5 mb-md-4 ">
             <h1 class="head">{{mealDetails.strMeal}}</h1>
@@ -55,5 +55,8 @@
 
     </div>
 
+    }
+    @else if (mealNotFound) {
+        <app-notfound/>
     }
 </div>

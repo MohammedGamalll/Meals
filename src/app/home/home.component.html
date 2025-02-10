@@ -12,14 +12,15 @@
             <h1>Learn, Cook, Eat Your Food</h1>
         </header>
     </app-catigouries>
-    <section class="meals w-100 my-2">
+    <section class="meals w-100 my-2 flex justify-center">
         @if (allMeals) {
-        <ul class="row list-unstyled w-100 my-5">
+        <ul class="grid grid-cols-12 list-unstyled w-100 my-5">
             @if(selectedCategory === 'All'){
             @for (meal of allMeals; track meal.idMeal) {
-            <li class="col-md-4 col-lg-3 py-4 px-lg-4 px-md-1 px-1">
+            <!-- col-md-4 col-lg-3 py-4 px-lg-4 px-md-1 px-1 -->
+            <li class="col-span-3 w-full px-3 py-4">
                 <div
-                    class="inner bg-white p-3 rounded-4 d-flex flex-column justify-content-end align-items-center">
+                    class="inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
                     <img src="{{meal.strMealThumb}}" class
                         alt="{{meal.strMeal}}">
                     <h2 class="text-center">{{meal.strMeal}}</h2>
@@ -39,9 +40,10 @@
             }
             @else {
             @for (meal of selectedMeals ; track meal.idMeal){
-            <li class="col-md-4 col-lg-3 py-4 px-lg-4 px-md-1 px-1">
+            <li class="col-span-3 w-full px-3 py-4">
                 <div
-                    class="notAll inner bg-white p-4 rounded-4 d-flex flex-column justify-content-end align-items-center">
+                    class="notAll inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
+
                     <img src="{{meal.strMealThumb}}" class
                         alt="{{meal.strMeal}}">
                     <h2
