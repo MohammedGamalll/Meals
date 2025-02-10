@@ -1,18 +1,23 @@
 <div class="meal-details py-5 px-4">
     @if (loading) {
-    <div class="load">
-        <p class="bg-success w-100 fs-2 text-white fw-bold me-5">Loading meal
-            details...</p>
+    <div class="loader flex justify-center items-center min-vh-100">
+        <div class="spinner-border text-orange-400" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
     </div>
 
     } @else if (mealDetails) {
     <div class="container d-flex flex-column justify-content-center">
-        <div class="meal-header d-flex flex-column align-items-center mb-5 mb-md-4 ">
+        <div
+            class="meal-header d-flex flex-column align-items-center mb-5 mb-md-4 ">
             <h1 class="head">{{mealDetails.strMeal}}</h1>
             <img [src]="mealDetails.strMealThumb" [alt]="mealDetails.strMeal">
-            <div class="links">
-                <a class="youtube rounded-pill mx-3" href="{{mealDetails.strYoutube}}" target="_blank">Youtube</a>
-                <a class="source rounded-pill" href="{{mealDetails.strSource}}" target="_blank">Source</a>
+            <div class="links my-3">
+                <a class="youtube rounded-pill mx-3"
+                    href="{{mealDetails.strYoutube}}"
+                    target="_blank">Youtube</a>
+                <a class="source rounded-pill" href="{{mealDetails.strSource}}"
+                    target="_blank">Source</a>
             </div>
         </div>
 
@@ -26,10 +31,20 @@
                 <div class="d-flex justify-content-between">
                     <table class="table table-striped bg-white">
                         @for (item of ingredientsAndMeasures; track $index) {
+                        @if ($index%2==0 ) {
                         <tr>
-                            <td>{{item.ingredient}}</td>
-                            <td>{{item.measure}}</td>
+                            <td class="p-1 ">{{item.ingredient}}</td>
+                            <td class="p-1 ">{{item.measure}}</td>
+
                         </tr>
+                        }
+                        @else {
+                        <tr class="bg-orange-400">
+                            <td class="p-1 ">{{item.ingredient}}</td>
+                            <td class="p-1 ">{{item.measure}}</td>
+
+                        </tr>
+                        }
                         }
 
                     </table>
@@ -40,10 +55,5 @@
 
     </div>
 
-    } @else if (mealNotFound) {
-    <div class="error-screen">
-        <h1>Meal Not Found :( </h1>
-        <p>The meal ID you entered is invalid or doesn't exist.</p>
-    </div>
     }
 </div>

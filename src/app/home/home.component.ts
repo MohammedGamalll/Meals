@@ -13,6 +13,7 @@ import { SidebarComponent } from "../sidebar/sidebar.component";
 })
 export class HomeComponent {
   private readonly _MealsService = inject(MealsService);
+  loading: boolean = true;
   allMeals!: IMeal[];
   selectedMeals!: IMeal[];
   selectedCategory: string = 'All';
@@ -23,12 +24,12 @@ export class HomeComponent {
       next: (data) => {
         this.allMeals = data.meals;
         // console.log(data.meals);
+        this.loading = false;
       },
       error: (error) => {
         console.log(error);
       },
       complete: () => {
-        // console.log('done');
       },
     });
   }
@@ -41,6 +42,7 @@ export class HomeComponent {
           this.selectedMeals = data.meals;
           // console.log(data.meals);
           // console.log(this.selectedMeals);
+
         },
         error: (error) => {
           console.log(error);
@@ -56,6 +58,7 @@ export class HomeComponent {
       this._MealsService.getMeals().subscribe({
         next: (data) => {
           this.allMeals = data.meals;
+          this.loading = false;
           // console.log(this.allMeals);
         },
         error: (error) => {
