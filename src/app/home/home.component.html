@@ -18,7 +18,7 @@
             @if(selectedCategory === 'All'){
             @for (meal of allMeals; track meal.idMeal) {
             <li
-                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full px-3 py-4">
+                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full md:px-2 lg:px-3 sm:px-1 py-4">
                 <div
                     class="inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
                     <img src="{{meal.strMealThumb}}" class
@@ -32,7 +32,7 @@
                                 d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>{{meal.strArea}}</p>
                     <a (click)="viewRecipe(meal.idMeal)"
                         routerLink=`meal${meal.idMeal}`
-                        class=" text-decoration-none text-white rounded-pill px-2 py-1">View
+                        class=" text-decoration-none text-white rounded-pill px-2 py-1 text-center">View
                         Recipe</a>
                 </div>
             </li>
@@ -41,8 +41,8 @@
             @else {
             @for (meal of selectedMeals ; track meal.idMeal){
             <li
-                class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full px-3 py-4">
-                <div
+            class="md:col-span-6 lg:col-span-4 xl:col-span-3 col-span-12 w-full md:px-2 lg:px-3 sm:px-1 py-4">
+            <div
                     class="notAll inner bg-white rounded-4 flex flex-col justify-end items-center pb-3">
 
                     <img src="{{meal.strMealThumb}}" class
@@ -51,7 +51,7 @@
                         class="text-center">{{meal.strMeal.split(" ").slice(0,2).join(" ")}}</h2>
                     <a (click)="viewRecipe(meal.idMeal)"
                         routerLink=`meal${meal.idMeal}`
-                        class=" text-decoration-none text-white rounded-pill px-2 py-1">View
+                        class=" text-decoration-none text-white rounded-pill px-2 py-1 text-center">View
                         Recipe</a>
                 </div>
             </li>
