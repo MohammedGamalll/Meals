@@ -4,7 +4,17 @@ import { MealDetailsComponent } from './meal-details/meal-details.component';
 import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
-  { path: 'meal/:id', component: MealDetailsComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  {path: '', redirectTo: '/home', pathMatch: 'full'}
+  {
+    path: 'meal/:id',
+    loadComponent: () =>
+      import('./meal-details/meal-details.component').then(
+        (e) => e.MealDetailsComponent
+      ),
+  },
+  // {
+  //   path: '**',
+  //   component:nout
+  // },
 ];
